@@ -1,31 +1,58 @@
 :root {
-  --main-color: #434455;
-  --second-color: #4d5ae5;
-  --black-color: #2e2f42;
-  --white-color: #ffffff;
-  --second-bg-color: #f4f4fd;
-  --hover-focus-color: #404bbf;
+  /* primary */
+  --primary-black-cl: #434455;
+  --primary-black-bg: #434455;
+  --primary-white-cl: #ffffff;
+  --primary-white-bg: #ffffff;
+  --primary-accent-cl: #4d5ae5;
+  --primary-accent-bg: #4d5ae5;
+  /* secondary */
+  --secondary-black-cl: #2e2f42;
+  --secondary-black-bg: #2e2f42;
+  --secondary-white-cl: #f4f4fd;
+  --secondary-white-bg: #f4f4fd;
+  --secondary-accent-cl: #404bbf;
+  --secondary-accent-bg: #404bbf;
 }
-
+/**
+  |============================
+  | common styles
+  |============================
+*/
 body {
-  background-color: var(--white-color);
-  color: var(--main-color);
+  background-color: var(--primary-white-bg);
+  color: var(--primary-black-cl);
   font-family: Roboto, sans-serif;
   font-style: normal;
   line-height: 1.15;
   letter-spacing: 0.02em;
 }
 
-.list {
+/* reset */
+.list,
+ul,
+ol {
   list-style: none;
 }
-.link {
+.link,
+a {
   text-decoration: none;
+  color: currentColor;
 }
+.btn,
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+/**
+  |============================
+  | base styles
+  |============================
+*/
 
 /* logo */
 .logo {
-  color: var(--second-color);
+  color: var(--primary-accent-cl);
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -35,16 +62,16 @@ body {
   text-transform: uppercase;
 }
 .logo-black {
-  color: var(--black-color);
+  color: var(--secondary-black-cl);
 }
 
 .logo-white {
-  color: var(--second-bg-color);
+  color: var(--secondary-white-cl);
 }
 /* site-nav */
 
 .site-nav a {
-  color: var(--black-color);
+  color: var(--secondary-black-cl);
 
   font-size: 16px;
   font-weight: 500;
@@ -55,14 +82,14 @@ body {
 .link-current:focus,
 .address-nav-link:hover,
 .address-nav-link:focus {
-  color: var(--hover-focus-color);
+  color: var(--secondary-accent-cl);
 }
 
 .address {
   font-style: normal;
 }
 .address-nav a {
-  color: var(--main-color);
+  color: var(--primary-black-cl);
 }
 .address-nav-link {
   line-height: 1.5;
@@ -70,23 +97,23 @@ body {
 /* hero */
 
 .hero {
-  background-color: var(--black-color);
+  background-color: var(--secondary-black-bg);
 }
 
 .hero-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  color: var(--white-color);
+  color: var(--primary-white-cl);
   letter-spacing: 0.02em;
   text-align: center;
 }
 
 .button {
-  background-color: var(--second-color);
+  background-color: var(--primary-accent-bg);
   font-weight: 500;
   font-size: 16px;
-  color: var(--white-color);
+  color: var(--primary-white-cl);
   letter-spacing: 0.04em;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -94,10 +121,10 @@ body {
 }
 
 .portfolio-button {
-  background-color: var(--second-bg-color);
+  background-color: var(--secondary-white-bg);
   font-weight: 500;
   font-size: 16px;
-  color: var(--second-color);
+  color: var(--primary-accent-cl);
   letter-spacing: 0.04em;
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
@@ -106,12 +133,12 @@ body {
 
 .button:hover,
 .button:focus {
-  background-color: var(--hover-focus-color);
+  background-color: var(--secondary-accent-bg);
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
-  background-color: var(--hover-focus-color);
-  color: var(--white-color);
+  background-color: var(--secondary-accent-bg);
+  color: var(--primary-white-cl);
 }
 
 /* section */
@@ -120,12 +147,12 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  color: var(--black-color);
+  color: var(--secondary-black-cl);
   letter-spacing: 0.02em;
 }
 .li-text {
   line-height: 1.5;
-  color: var(--main-color);
+  color: var(--primary-black-cl);
 }
 
 /* our activity */
@@ -135,25 +162,25 @@ body {
   font-size: 36px;
   line-height: 1.11;
   text-transform: capitalize;
-  color: var(--black-color);
+  color: var(--secondary-black-cl);
   text-align: center;
   letter-spacing: 0.02em;
 }
 
 /* our team  */
 .team {
-  background-color: var(--second-bg-color);
+  background-color: var(--secondary-white-bg);
 }
 .team-li {
-  background-color: var(--white-color);
+  background-color: var(--primary-white-bg);
 }
 
 /* footer */
 .footer {
-  background-color: var(--black-color);
+  background-color: var(--secondary-black-bg);
 }
 .footer-text {
-  color: var(--second-bg-color);
+  color: var(--secondary-white-cl);
   line-height: 1.5;
 }
 
