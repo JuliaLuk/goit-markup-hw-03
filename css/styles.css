@@ -31,8 +31,18 @@ body {
   line-height: 1.15;
   letter-spacing: 0.02em;
 }
-.hidden {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* reset */
 h1,
@@ -71,8 +81,7 @@ button {
 */
 /* header */
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  border-bottom: 1px solid #e7e9fc;
 }
 .header-container {
   display: flex;
@@ -124,6 +133,7 @@ button {
   display: flex;
   align-items: center;
   gap: 40px;
+  padding: 24px 0;
 }
 
 .link-current:hover,
@@ -162,7 +172,7 @@ button {
   color: var(--primary-white-cl);
   letter-spacing: 0.02em;
   text-align: center;
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto;
 }
 
@@ -178,7 +188,10 @@ button {
   display: block;
   margin: 48px auto;
   padding: 16px 32px;
+  border-radius: none;
   border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
 }
 
 .portfolio-button {
@@ -205,13 +218,12 @@ button {
 /* our advantage */
 
 .adv-section {
-  margin-top: 120px;
-  margin-bottom: 60px;
+  padding: 120px 0;
 }
 
 .adv-list {
   display: flex;
-  justify-content: space-between;
+  gap: 24px;
 }
 .adv-item {
   width: 264px;
@@ -232,7 +244,6 @@ button {
 /* our activity */
 
 .activity {
-  padding-top: 60px;
   padding-bottom: 120px;
 }
 .vice-title {
@@ -243,6 +254,14 @@ button {
   color: var(--secondary-black-cl);
   text-align: center;
   letter-spacing: 0.02em;
+  margin-bottom: 72px;
+}
+.activity-list {
+  display: flex;
+  gap: 24px;
+}
+.activity-item {
+  flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
 /* our team  */
