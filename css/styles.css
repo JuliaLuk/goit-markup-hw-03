@@ -162,6 +162,8 @@ button {
   color: var(--primary-white-cl);
   letter-spacing: 0.02em;
   text-align: center;
+  width: 496px;
+  margin: 0 auto;
 }
 
 .button {
@@ -173,6 +175,10 @@ button {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
   cursor: pointer;
+  display: block;
+  margin: 48px auto;
+  padding: 16px 32px;
+  border-radius: 4px;
 }
 
 .portfolio-button {
