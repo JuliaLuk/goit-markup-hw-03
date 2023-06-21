@@ -206,6 +206,9 @@ button {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
   cursor: pointer;
+  padding: 12px 24px;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
 }
 
 .button:hover,
@@ -216,6 +219,7 @@ button {
 .portfolio-button:focus {
   background-color: var(--secondary-accent-bg);
   color: var(--primary-white-cl);
+  border: 1px solid transparent;
 }
 
 /* our advantage */
@@ -238,10 +242,12 @@ button {
   color: var(--secondary-black-cl);
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
 }
 .li-text {
   line-height: 1.5;
   color: var(--primary-black-cl);
+  text-align: center;
 }
 
 /* our activity */
@@ -273,8 +279,19 @@ button {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
 .team-li {
   background-color: var(--primary-white-bg);
+  flex-basis: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-name {
+  padding: 32px 16px;
 }
 
 /* footer */
@@ -286,18 +303,39 @@ button {
 .footer-text {
   color: var(--secondary-white-cl);
   line-height: 1.5;
+  max-width: 264px;
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 /* style to portfolio */
 
 .filters {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 
 .portfolio-nav {
-  padding-top: 96px;
-  padding-bottom: 72px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-basis: calc((100%-96) / 5);
+  margin-bottom: 72px;
 }
 
 .portf-list {
   text-decoration: none;
+}
+
+.portfolio-bloks {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.portfolio-bloks-item {
+  width: calc((100% - 48px) / 3);
 }
